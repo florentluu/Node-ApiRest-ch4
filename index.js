@@ -6,6 +6,7 @@ const api = require("./src/routes");
 const app = express();
 const port = 3000;
 
+
 // Support JSON-encoded bodies
 app.use(bodyParser.json());
 // Support URL-encoded bodies
@@ -25,6 +26,9 @@ app.use(function(_req, res, next) {
 
 app.use("/api", api);
 
+
+
+
 app.listen(port, (err) => {
   if (err) {
     throw new Error("Something bad happened...");
@@ -32,3 +36,5 @@ app.listen(port, (err) => {
   // eslint-disable-next-line no-console
   console.log(`Server is listening on ${port}`);
 });
+
+
